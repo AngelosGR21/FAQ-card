@@ -72,6 +72,7 @@ body{
     align-items: center;
     font-size: 12px;
     cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
 }
 .question img{
     cursor: pointer;

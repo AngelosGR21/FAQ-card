@@ -23,15 +23,21 @@ function conditional(number) {
         arrows[number].style.transform = 'rotate(0deg)'
     }
 }
+function conditional2(number1, number2, number3, number4) {
+    conditional(number1)
+    conditional(number2)
+    conditional(number3)
+    conditional(number4)
+}
 
-arrows[0].addEventListener('click', () => { eventListener(0), conditional(1), conditional(2), conditional(3), conditional(4) })
-arrows[1].addEventListener('click', () => { eventListener(1), conditional(2), conditional(3), conditional(4), conditional(0) })
-arrows[2].addEventListener('click', () => { eventListener(2), conditional(3), conditional(4), conditional(0), conditional(1) })
-arrows[3].addEventListener('click', () => { eventListener(3), conditional(4), conditional(0), conditional(1), conditional(2) })
-arrows[4].addEventListener('click', () => { eventListener(4), conditional(0), conditional(1), conditional(2), conditional(3) })
+arrows[0].addEventListener('click', () => { eventListener(0), conditional2(1, 2, 3, 4) })
+arrows[1].addEventListener('click', () => { eventListener(1), conditional2(2, 3, 4, 0) })
+arrows[2].addEventListener('click', () => { eventListener(2), conditional2(3, 4, 0, 1) })
+arrows[3].addEventListener('click', () => { eventListener(3), conditional2(4, 0, 1, 2) })
+arrows[4].addEventListener('click', () => { eventListener(4), conditional2(0, 1, 2, 3) })
 
-headers[0].addEventListener('click', () => { eventListener(0), conditional(1), conditional(2), conditional(3), conditional(4) })
-headers[1].addEventListener('click', () => { eventListener(1), conditional(2), conditional(3), conditional(4), conditional(0) })
-headers[2].addEventListener('click', () => { eventListener(2), conditional(3), conditional(4), conditional(0), conditional(1) })
-headers[3].addEventListener('click', () => { eventListener(3), conditional(4), conditional(0), conditional(1), conditional(2) })
-headers[4].addEventListener('click', () => { eventListener(4), conditional(0), conditional(1), conditional(2), conditional(3) })
+headers[0].addEventListener('click', () => { eventListener(0), conditional2(1, 2, 3, 4) })
+headers[1].addEventListener('click', () => { eventListener(1), conditional2(2, 3, 4, 0) })
+headers[2].addEventListener('click', () => { eventListener(2), conditional2(3, 4, 0, 1) })
+headers[3].addEventListener('click', () => { eventListener(3), conditional2(4, 0, 1, 2) })
+headers[4].addEventListener('click', () => { eventListener(4), conditional2(0, 1, 2, 3) })
